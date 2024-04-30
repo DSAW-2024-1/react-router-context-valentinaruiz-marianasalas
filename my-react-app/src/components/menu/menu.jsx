@@ -6,6 +6,8 @@ const Menu = () => {
       <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/contact">Contact</Link></li>
+        <li><Link to="/login">Login</Link></li>
+
         {/* Agrega más enlaces aquí si es necesario */}
       </ul>
     </nav>
