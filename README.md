@@ -7,7 +7,6 @@
 ## Router Seguro con React.js
 
 ## Link despliegue
-https://react-router-omega-one.vercel.app
 
 ### Objetivo
 Crear un router seguro utilizando React.js, React Context y localStorage. Permitir que el usuario con correo "admin@admin.com" y clave "admin" pueda acceder a todas las páginas, mientras que los usuarios no logeados o que intenten acceder a páginas prohibidas sean redirigidos al login. Las páginas del sistema serán: login, home, overview y contact.
