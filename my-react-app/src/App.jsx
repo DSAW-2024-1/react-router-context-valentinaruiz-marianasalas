@@ -1,16 +1,42 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Home, Contact } from './pages';
-import './App.css';
+import Login from "./pages/Login/login";
+import Logout from "./pages/logout/Logout";
+import Contact from "./pages/contact/contact";
+import Home from "./pages/home/home";
+import Overview from "./pages/overview/overview";
+import AuthProvider, {
+  AuthIsNotSignedIn,
+  AuthIsSignedIn,
+} from "./contexts/AuthContext";
+import {
+  Navigate,
+  Route,
+  BrowserRouter as Router,
+  Routes,
+} from "react-router-dom";
 
-function App() {
+export default function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
+    <AuthProvider>
+      <AuthIsSignedIn>
+        <Router>
+          <Routes>
+            <Route path={"/"} element={<Home />} />
+            <Route path={"/logout"} element={<Logout />} />
+            <Route path={"/contact"} element={<Contact />} />
+            <Route path={"/overview"} element={<Overview />} />
+
+          </Routes>
+        </Router>
+      </AuthIsSignedIn>
+      <AuthIsNotSignedIn>
+        <Router>
+          <Routes>
+            <Route path={"/"} element={<Login />} />
+            <Route path={"/login"} element={<Login />} />
+            <Route path="*" element={<Navigate replace to={"/login"} />} />
+          </Routes>
+        </Router>
+      </AuthIsNotSignedIn>
+    </AuthProvider>
   );
 }
-
-export default App;
