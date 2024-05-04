@@ -1,8 +1,4 @@
-import Login from "./pages/Login/login";
-import Logout from "./pages/logout/Logout";
-import Contact from "./pages/contact/contact";
-import Home from "./pages/home/home";
-import Overview from "./pages/Overview/overview";
+import {Login, Logout, Contact, Home, Overview} from "./pages";
 import AuthProvider, {
   AuthIsNotSignedIn,
   AuthIsSignedIn,
