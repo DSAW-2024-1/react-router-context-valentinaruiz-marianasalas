@@ -31,11 +31,10 @@
       "dest": "/client/index.html"
     }
   ],
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/client/index.html"
-    }
-  ]
+  
+    "rewrites":  [
+      {"source": "/(.*)", "destination": "/"}
+    ]
+  
 }
 
