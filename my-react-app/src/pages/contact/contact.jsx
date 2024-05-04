@@ -3,7 +3,7 @@ import { Menu } from '../../components';
 const Contact = () => {
   return (
     <div>
-      <h1>Contactanos</h1>
+      <h1>Contact</h1>
       <p>No dudes en contactarnos!</p>
       <p>Estamos aquí para ayudarte y responder tus preguntas:</p>
       <ul>
