@@ -1,4 +1,6 @@
 import {Login, Logout, Contact, Home, Overview} from "./pages";
+import { Menu } from "./components";
+import './App.css'
 import AuthProvider, {
   AuthIsNotSignedIn,
   AuthIsSignedIn,
@@ -20,7 +22,11 @@ export default function App() {
             <Route path={"/logout"} element={<Logout />} />
             <Route path={"/contact"} element={<Contact />} />
             <Route path={"/overview"} element={<Overview />} />
-
+            <Route path="*" element={<>
+              <p>Error</p>
+              <p>Las rutas permitidas son:</p>
+              <Menu />
+            </>} />
           </Routes>
         </Router>
       </AuthIsSignedIn>

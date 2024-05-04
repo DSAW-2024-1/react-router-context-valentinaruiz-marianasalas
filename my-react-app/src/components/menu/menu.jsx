@@ -6,7 +6,7 @@ const Menu = () => {
   const { authStatus } = useContext(AuthContext);
 
   return (
-    <nav>
+    <nav className="menu">
       <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/contact">Contact</Link></li>
