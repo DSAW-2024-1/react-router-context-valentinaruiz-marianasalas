@@ -1,0 +1,11 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+*{
+    margin: 15px;
+}
+.menu {
+    color: #ec8888; /* Color del texto del menú */
+    padding: 10px; /* Espaciado interno del menú */
+  }
+  
