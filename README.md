@@ -9,8 +9,6 @@
 ## Link despliegue
 https://react-router-ruby.vercel.app/
 
-## Repositorio usado para desplegar
-https://github.com/ValeRuizTo/react-router.git
 
 ### Objetivo
 Crear un router seguro utilizando React.js, React Context y localStorage. Permitir que el usuario con correo "admin@admin.com" y clave "admin" pueda acceder a todas las páginas, mientras que los usuarios no logeados o que intenten acceder a páginas prohibidas sean redirigidos al login. Las páginas del sistema serán: login, home, overview y contact.
