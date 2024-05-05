@@ -3,7 +3,13 @@ import { useContext } from 'react';
 import { AuthContext, AuthStatus } from '../../contexts/AuthContext'; 
 
 const Menu = () => {
-  const { authStatus } = useContext(AuthContext);
+  const { authStatus, signOut } = useContext(AuthContext);
+
+  const handleLogout = async () => {
+    localStorage.setItem("username", "");
+    signOut();
+    window.location.href = "/login";
+  };
 
   return (
     <nav className="menu">
@@ -12,7 +18,7 @@ const Menu = () => {
         <li><Link to="/contact">Contact</Link></li>
         <li><Link to="/overview">Overview</Link></li>
         {authStatus === AuthStatus.SignedOut && <li><Link to="/login">Login</Link></li>}
-        {authStatus === AuthStatus.SignedIn && <li><Link to="/logout">Logout</Link></li>}
+        {authStatus === AuthStatus.SignedIn && <li><button onClick={handleLogout}>Logout</button></li>}
       </ul>
     </nav>
   );
