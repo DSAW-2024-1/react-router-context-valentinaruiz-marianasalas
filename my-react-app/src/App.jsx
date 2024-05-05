@@ -1,4 +1,4 @@
-import {Login, Logout, Contact, Home, Overview} from "./pages";
+import {Login,  Contact, Home, Overview} from "./pages";
 import { Menu } from "./components";
 import './App.css'
 import AuthProvider, {
@@ -19,7 +19,6 @@ export default function App() {
         <Router>
           <Routes>
             <Route path={"/"} element={<Home />} />
-            <Route path={"/logout"} element={<Logout />} />
             <Route path={"/contact"} element={<Contact />} />
             <Route path={"/overview"} element={<Overview />} />
             <Route path="*" element={<>
